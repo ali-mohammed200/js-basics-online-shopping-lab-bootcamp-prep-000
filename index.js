@@ -33,6 +33,7 @@ function viewCart() {
       str += `${objElem[itemName]} at $${objElem[itemPrice]}, `;
     }
   }
+  return str;
 }
 
 function total() {
