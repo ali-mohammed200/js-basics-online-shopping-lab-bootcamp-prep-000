@@ -23,7 +23,15 @@ function viewCart() {
   }
   for(let i = 0; i < cart.length; i++){
     let objElem = cart[i];
-    
+    if(i === 0 && cart.length === 1){
+      str += `you have ${objElem[itemName]} at ${objElem[itemPrice]}.`;
+    } else if(i === 0){
+      str += `you have ${objElem[itemName]} at ${objElem[itemPrice]}, `;
+    } else if(i === cart.length - 1){
+      str += `and ${objElem[itemName]} at ${objElem[itemPrice]}.`;
+    } else {
+      str += `${objElem[itemName]} at ${objElem[itemPrice]},`;
+    }
   }
 }
 
